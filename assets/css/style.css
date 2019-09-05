@@ -1,0 +1,13 @@
+body {
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU4VMX-ZEXndPBOdxQQdseUj7P7kiofni1B1vmnADZkUWtZAji");
+background-color: blanchedalmond;
+/* -webkit-background-size: cover;pg
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; */
+}
+
+.gameInfo {
+    text-align: center;
+    color: aliceblue;
+}
