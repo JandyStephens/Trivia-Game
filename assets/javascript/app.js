@@ -18,7 +18,7 @@ $(document).ready(function () {
 
         if (number === 0) {
             timeIsUp();
-            console.log("TODO: reveal page");
+            // console.log("TODO: reveal page");
         }
     }
 
@@ -47,48 +47,63 @@ $(document).ready(function () {
         Q: "What is a sparkle pony?",
         A: ["A Mattel toy", "A person that spent more time on their appearance than for the harsh environmentdal conditions, and ends up relying on the charity of other burners", "A small breed horse native to the Black Rock desert"]
     }
-]
+    ]
 
-for (let i = 0; i < questions.length; i++) {
-    mainArea.append(`<h3>${questions[0].Q}</h3>`);
-    for (let j = 0; j < questions[i].A.length; j++) {
+    for (let i = 0; i < questions.length; i++) {
+        // mainArea.append(`<h3>${questions[i].Q}</h3>`);
 
-        mainArea
-    }
-}
+        var qOne = $("<div>");
+        qOne.html(`<h3>${questions[i].Q}</h3>`);
+        // console.log(questions[0].Q)
+        $(".main-area").append(qOne);
 
-//h3 for each question
-//radial button
-//list of answers
+        for (let j = 0; j < questions[i].A.length; j++) {
 
-
-// setTimeout(timeIsUp,10000); //10 seconds 
-// console.log(number);
-
-// window.onload = function() {
-//     number--;
-//     console.log(number);
-
-// }
+            qOne.append(questions[i].A[j]);
+            var radio = $("<input>");
+            radio.attr("type","radio");
+            radio.html(questions[i].A[j]);
+            $(".main-area").append(radio);
+            // $(".mainArea").append(questions[j].A);
+            // $(".mainArea").append(`<h3>${questions[j].Q}</h3>`);
+            // $(".possibleAnswers").append(questions[i].A[j])
 
 
+        }
 
-function timeConverter(t) {
-
-    var minutes = Math.floor(t / 60);
-    var seconds = t - (minutes * 60);
-
-    if (seconds < 10) {
-        seconds = "0" + seconds;
     }
 
-    if (minutes === 0) {
-        minutes = "00";
-    }
-    else if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
+    //h3 for each question
+    //radial button
+    //list of answers
 
-    return minutes + ":" + seconds;
-}
+    // setTimeout(timeIsUp,10000); //10 seconds 
+    // console.log(number);
+
+    // window.onload = function() {
+    //     number--;
+    //     console.log(number);
+
+    // }
+
+
+
+    function timeConverter(t) {
+
+        var minutes = Math.floor(t / 60);
+        var seconds = t - (minutes * 60);
+
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        if (minutes === 0) {
+            minutes = "00";
+        }
+        else if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+
+        return minutes + ":" + seconds;
+    }
 })
