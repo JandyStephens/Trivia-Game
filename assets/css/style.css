@@ -1,11 +1,11 @@
-/* body {
-background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU4VMX-ZEXndPBOdxQQdseUj7P7kiofni1B1vmnADZkUWtZAji");
+body {
+background-image: url("https://cms.hostelworld.com/hwblog/wp-content/uploads/sites/2/2018/06/IMG_8987abc.jpg");
 background-color: blanchedalmond;
 -webkit-background-size: cover;pg
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover; 
-} */
+}
 
 .gameInfo {
     text-align: center;
@@ -13,7 +13,8 @@ background-size: cover;
     /* background-color: grey; opacity: .5; */
 }
 
-.main-Area {
-    
-    /* text-align: center; */
-}
+/* .main-Area {
+    -moz-box-align: center;
+    text-align: center;
+    align-content: center;
+} */

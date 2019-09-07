@@ -37,7 +37,7 @@ $(document).ready(function () {
     },
     {
         Q: "Burning Man is a bartering economy.",
-        A: ["True", "False", "I don't know"]
+        A: ["True", "False", "Unsure"]
     },
     {
         Q: "How was Burning Man?",
@@ -60,8 +60,12 @@ $(document).ready(function () {
         for (let j = 0; j < questions[i].A.length; j++) {
 
             qOne.append(questions[i].A[j]);
+
             var radio = $("<input>");
             radio.attr("type","radio");
+            radio.attr("role","group")
+            // var radioText=$("radio").attr("name");  
+            // $(questions[i].A[j]).insertAfter(radio);
             radio.html(questions[i].A[j]);
             $(".main-area").append(radio);
             // $(".mainArea").append(questions[j].A);
