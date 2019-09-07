@@ -20,9 +20,17 @@ $(document).ready(function() {
     if (number === 0) {
       clearInterval(countdown);
       // timeIsUp();
-      console.log("TODO: Display right or wrong icons");
+      //   console.log("call answer page");
+      showAnswers();
     }
   }
+
+  //   TODO:create Submit button that calls answerPage
+  var submitBtn = $("<button>");
+  submitBtn.text("Check my answers");
+  $("#check-answers").append(submitBtn);
+
+  function showAnswers() {}
 
   //When 'Try Again' button clicked:
   // make 'Try Again' button
