@@ -1,11 +1,13 @@
 $(document).ready(function() {
-  var number = 3; //300=5 minutes
   var countdown;
   var mainArea = $(".main-area");
+  var initialTime = 3; //300=5 minutes
+  var number = initialTime;
 
   window.onload = runClock();
 
   function runClock() {
+    number = initialTime;
     countdown = setInterval(decrease, 1000);
   }
 
@@ -37,6 +39,7 @@ $(document).ready(function() {
     //     $(this).removeAttr("checkedv");
     //   });
     //TODO: clear right or wrong icons;
+    clearInterval(countdown);
     runClock();
   }
 
