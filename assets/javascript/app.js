@@ -28,14 +28,14 @@ $(document).ready(function() {
   tryAgain.text("Try Again");
   $("#try-again").append(tryAgain);
 
+  $("#try-again").click(reset);
+
   function reset() {
-    //TODO:clear radio buttons
-    $("try-again").click(function() {
-      $(".radio").each(function() {
-        $(this).removeAttr("checked");
-        $('input[type="radio"]').prop("checked", false);
-      });
-    });
+    $('input[type="radio"]').prop("checked", false);
+    //   $(".radio").each(function() {
+    //     //clear radio buttons
+    //     $(this).removeAttr("checkedv");
+    //   });
     //TODO: clear right or wrong icons;
     runClock();
   }
