@@ -19,3 +19,7 @@ body {
     align-content: center;
     color: aliceblue;
 } */
+
+.correct-answers {
+  background-color: green;
+}

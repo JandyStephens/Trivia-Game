@@ -1,13 +1,13 @@
 $(document).ready(function() {
   var countdown;
   var mainArea = $(".main-area");
-  var initialTime = 3; //300=5 minutes
-  var number = initialTime;
+  var initialSecs = 60; //300=5 minutes
+  var number = initialSecs;
 
   window.onload = runClock();
 
   function runClock() {
-    number = initialTime;
+    number = initialSecs;
     countdown = setInterval(decrease, 1000);
   }
 
@@ -25,12 +25,31 @@ $(document).ready(function() {
     }
   }
 
-  //   TODO:create Submit button that calls answerPage
+  //   create Submit button that calls answerPage
   var submitBtn = $("<button>");
   submitBtn.text("Check my answers");
   $("#check-answers").append(submitBtn);
 
-  function showAnswers() {}
+  $("#check-answers").click(showAnswers);
+
+  function showAnswers() {
+    var correctAnswers = [
+      questions[0].A[4],
+      questions[1].A[0],
+      questions[2].A[1],
+      questions[3].A[0],
+      questions[4].A[2]
+    ];
+    //$("div").addClass("correct-answers");
+    $("span").each(function() {
+      console.log(this.innerText);
+      for (let i = 0; i < correctAnswers.length; i++) {
+        if (this.innerText === correctAnswers[i].toString()) {
+          $(this).addClass("correct-answers");
+        }
+      }
+    });
+  }
 
   //When 'Try Again' button clicked:
   // make 'Try Again' button
@@ -48,6 +67,9 @@ $(document).ready(function() {
     //   });
     //TODO: clear right or wrong icons;
     clearInterval(countdown);
+    $("span").each(function() {
+      $(this).removeClass("correct-answers");
+    });
     runClock();
   }
 
@@ -110,6 +132,9 @@ $(document).ready(function() {
       // $(".possibleAnswers").append(questions[i].A[j])
     }
   }
+
+  //   var sheet = document.createElement('style');
+  //   sheet.innerHTML = "div {"
 
   //h3 for each question
   //radial button
