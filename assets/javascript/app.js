@@ -31,6 +31,7 @@ $(document).ready(function() {
   $("#check-answers").append(submitBtn);
 
   $("#check-answers").click(showAnswers);
+  // TODO: stop countdown timer when Check Answer button pushed
 
   function showAnswers() {
     var correctAnswers = [
@@ -114,6 +115,7 @@ $(document).ready(function() {
     $("h4")
       // .css("color", "aliceblue")
       .css("text-align", "center");
+    //TODO:BONUS set opaque grey background so text is easier to see
     // console.log(questions[0].Q)
     $(".main-area").append(qOne);
 
@@ -135,6 +137,7 @@ $(document).ready(function() {
       // $(".mainArea").append(questions[j].A);
       // $(".mainArea").append(`<h3>${questions[j].Q}</h3>`);
       // $(".possibleAnswers").append(questions[i].A[j])
+      //TODO:BONUS disable radio button selection after timer runs out or when Check Answers button pushed
     }
   }
 
