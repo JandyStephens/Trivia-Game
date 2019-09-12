@@ -12,14 +12,26 @@ body {
   color: aliceblue;
   /* background-color: grey; opacity: .5; */
 }
-
-/* .main-Area {
-    -moz-box-align: center;
+/* 
+.main-Area {
+  background: black(0.5);
+  -moz-box-align: center;
     text-align: center;
     align-content: center;
     color: aliceblue;
 } */
 
+.div,
+.span,
+.h4 {
+  background-color: black(0.5);
+}
+
 .correct-answers {
   background-color: green;
 }
+
+/* .h4,
+.span {
+  color: aliceblue;
+} */

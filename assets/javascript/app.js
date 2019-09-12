@@ -42,7 +42,7 @@ $(document).ready(function() {
     ];
     //$("div").addClass("correct-answers");
     $("span").each(function() {
-      console.log(this.innerText);
+      // console.log(this.innerText);
       for (let i = 0; i < correctAnswers.length; i++) {
         if (this.innerText === correctAnswers[i].toString()) {
           $(this).addClass("correct-answers");
@@ -111,14 +111,19 @@ $(document).ready(function() {
 
     var qOne = $("<div>");
     qOne.html(`<h4>${questions[i].Q}</h4>`);
+    $("h4")
+      // .css("color", "aliceblue")
+      .css("text-align", "center");
     // console.log(questions[0].Q)
     $(".main-area").append(qOne);
 
     for (let j = 0; j < questions[i].A.length; j++) {
       //   qOne.append(questions[i].A[j]);
+      // $("span").css("color", "aliceblue");
 
       var radio = $(
-        `<div><input type="radio" name="question${i}"><span>${questions[i].A[j]}</span></div>`
+        `<div><input type="radio" name="question${i}"><span>${questions[i].A[j]}</span></div>`,
+        $("div").css("text-align", "center")
       );
 
       //   radio.attr("type", "radio");
